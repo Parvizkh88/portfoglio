@@ -1,0 +1,54 @@
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+}
+.avatar {
+  border-radius: 50%;
+}
+.greeting {
+  font-size: large;
+}
+.bio1 {
+  font-size: xx-large;
+  margin-top: 100px;
+}
+.bio2 {
+  font-size: xx-large;
+}
+/* .cards {
+  display: flex;
+  flex-direction: column;
+} */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+.card {
+  background-color: #f0f0f0;
+  /* padding: 20px; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  border-radius: 8px;
+}
+.card h1 {
+  color: black;
+  font-size: x-large;
+  font-weight: 700;
+  padding-left: 15px;
+}
+/* .card p {
+  color: gray;
+  font-size: large;
+  font-weight: 700;
+  padding-left: 15px;
+  margin: 10px 0;
+} */
+.card button {
+  color: darkslategrey;
+  font-size: large;
+  font-weight: 700;
+  padding-left: 15px;
+}
