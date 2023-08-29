@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <Box
-      position="fixed" 
+      position="fixed"
       top={0}
       left={0}
       right={0}
@@ -66,21 +66,20 @@ const Header = () => {
           alignItems="center"
         >
           <nav  >
-             <a href="mailto: hello@example.com" style={{marginRight:'10px'}}>
-              <FontAwesomeIcon  icon={faEnvelope} size="2x"/>
-            </a>                  
-             <a href="https://github.com" style={{marginRight:'10px'}}>
-              <FontAwesomeIcon  icon={faGithub} size="2x"/>
-            </a> 
-               <a href="https://www.linkedin.com">
-              <FontAwesomeIcon  icon={faLinkedin} size="2x"/>
-            </a> 
+            <a href="mailto: hello@example.com" style={{ marginRight: '10px' }}>
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            </a>
+            <a href="https://github.com" style={{ marginRight: '10px' }}>
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a href="https://www.linkedin.com">
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
           </nav>
-             <nav>
+          <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
-               <a href="#projects-section" onClick={handleClick('projects')} >Projects</a>
-               <a href="#contactme-section" onClick={handleClick('contactme')} >Contact Me</a>
+              <a href="#projects" onClick={handleClick('projects')} >Projects</a>
+              <a href="#contactme" onClick={handleClick('contactme')} >Contact Me</a>
             </HStack>
           </nav>
         </HStack>

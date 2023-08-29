@@ -35,6 +35,15 @@ const LandingSection = () => {
     }),
   });
 
+  useEffect(() => {
+    if (response) {
+      onOpen(response.type, response.message);
+      if (response.type === 'success') {
+        formik.resetForm()
+      }
+    }
+  }, [response])
+
   return (
     <FullScreenSection
       isDarkBackground
@@ -47,13 +56,12 @@ const LandingSection = () => {
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
-                  // name="firstName"
                   type="firstName"
                   {...formik.getFieldProps('firstName')}
                 />
@@ -63,7 +71,6 @@ const LandingSection = () => {
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
-                  // name="email"
                   type="email"
                   {...formik.getFieldProps('email')}
                 />
